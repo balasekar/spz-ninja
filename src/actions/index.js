@@ -1,50 +1,40 @@
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const SELECT_REDDIT = 'SELECT_REDDIT'
-export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT'
+import shop from '../api/shop'
+import * as types from '../constants/ActionTypes'
 
-export const selectReddit = reddit => ({
-  type: SELECT_REDDIT,
-  reddit
-})
+const receiveProducts = products => ({
+  type: types.RECEIVE_PRODUCTS,
+  products: products
+});
 
-export const invalidateReddit = reddit => ({
-  type: INVALIDATE_REDDIT,
-  reddit
-})
+export const getAllProducts = () => dispatch => {
+  shop.getProducts(products => {
+    dispatch(receiveProducts(products))
+  })
+};
 
-export const requestPosts = reddit => ({
-  type: REQUEST_POSTS,
-  reddit
-})
+const addToCartUnsafe = productId => ({
+  type: types.ADD_TO_CART,
+  productId
+});
 
-export const receivePosts = (reddit, json) => ({
-  type: RECEIVE_POSTS,
-  reddit,
-  posts: json.data.children.map(child => child.data),
-  receivedAt: Date.now()
-})
-
-const fetchPosts = reddit => dispatch => {
-  dispatch(requestPosts(reddit))
-  return fetch(`https://www.reddit.com/r/${reddit}.json`)
-    .then(response => response.json())
-    .then(json => dispatch(receivePosts(reddit, json)))
-}
-
-const shouldFetchPosts = (state, reddit) => {
-  const posts = state.postsByReddit[reddit]
-  if (!posts) {
-    return true
+export const addToCart = productId => (dispatch, getState) => {
+  if (getState().products.byId[productId].inventory > 0) {
+    dispatch(addToCartUnsafe(productId))
   }
-  if (posts.isFetching) {
-    return false
-  }
-  return posts.didInvalidate
-}
+};
 
-export const fetchPostsIfNeeded = reddit => (dispatch, getState) => {
-  if (shouldFetchPosts(getState(), reddit)) {
-    return dispatch(fetchPosts(reddit))
-  }
-}
+export const checkout = products => (dispatch, getState) => {
+  const { cart } = getState();
+
+  dispatch({
+    type: types.CHECKOUT_REQUEST
+  });
+  shop.buyProducts(products, () => {
+    dispatch({
+      type: types.CHECKOUT_SUCCESS,
+      cart
+    })
+    // Replace the line above with line below to rollback on failure:
+    // dispatch({ type: types.CHECKOUT_FAILURE, cart })
+  })
+};

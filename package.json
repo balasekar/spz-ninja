@@ -1,10 +1,11 @@
 {
-  "name": "async",
+  "name": "shopping-cart",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "^1.0.2",
-    "redux-logger": "^3.0.6"
+    "enzyme": "^2.8.2",
+    "react-scripts": "^1.0.1",
+    "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
@@ -12,6 +13,7 @@
     "react-dom": "^15.5.0",
     "react-redux": "^5.0.5",
     "redux": "^3.5.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0"
   },
   "scripts": {
