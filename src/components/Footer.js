@@ -11,10 +11,6 @@ class SPZ_Footer extends Component {
                     }
                     links={
                         <ul>
-                            <li><a className="grey-text text-lighten-3" href="#!">ISI</a></li>
-                            <li><a className="grey-text text-lighten-3" href="#!">IAF</a></li>
-                            <li><a className="grey-text text-lighten-3" href="#!">TNSCT</a></li>
-                            <li><a className="grey-text text-lighten-3" href="#!">IND</a></li>
                         </ul>
                     }
                     className='example'>
