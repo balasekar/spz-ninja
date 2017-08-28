@@ -1,15 +1,8 @@
-import React from 'react'
-import ProductsContainer from './ProductsContainer'
-import CartContainer from './CartContainer'
+import React from 'react';
+import Layout from '../components/Layout';
 
 const App = () => (
-  <div>
-    <h2>Shopping Cart Example</h2>
-    <hr/>
-    <ProductsContainer />
-    <hr/>
-    <CartContainer />
-  </div>
-)
+    <Layout />
+);
 
 export default App
