@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
@@ -17,10 +19,17 @@ const store = createStore(
   applyMiddleware(...middleware)
 );
 
+injectTapEventPlugin();
+
+const AppUI = () => (
+    <MuiThemeProvider>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </MuiThemeProvider>
+);
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <AppUI />,
   document.getElementById('root')
 );
