@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+import styles from './Header.scss';
 
 export default class Header extends React.Component {
     burgerToggle = () => {
@@ -14,17 +14,22 @@ export default class Header extends React.Component {
     render() {
         return (
             <nav>
-                <div className="navWide">
-                    <div className="wideDiv">
+                <div className={styles.navWide}>
+                    <div className={styles.wideDiv}>
                         <a href="/">SPowerz</a>
                         <a href="/">Solutions</a>
                         <a href="/">Products</a>
                         <a href="/">Clients</a>
                     </div>
                 </div>
-                <div className="navNarrow">
-                    <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
-                    <div className="narrowLinks">
+                <div className={styles.navNarrow}>
+                    {/*let iclass = classNames({
+                    'styles.fa': true,
+                    'styles.fa-bars': true,
+                    'styles.fa-2x': true
+                });*/}
+                    <i className={styles.fa} onClick={this.burgerToggle}></i>
+                    <div className={styles.narrowLinks}>
                         <a href="/" onClick={this.burgerToggle}>SPowerz</a>
                         <a href="/" onClick={this.burgerToggle}>Solutions</a>
                         <a href="/" onClick={this.burgerToggle}>Products</a>
