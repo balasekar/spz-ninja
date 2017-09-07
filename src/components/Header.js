@@ -1,35 +1,30 @@
 import React from 'react';
-import styles from './Header.scss';
+import './Header.scss';
 
 export default class Header extends React.Component {
-    burgerToggle = () => {
+/*    burgerToggle() {
         let linksEl = document.querySelector('.narrowLinks');
         if (linksEl.style.display === 'block') {
             linksEl.style.display = 'none';
         } else {
             linksEl.style.display = 'block';
         }
-    };
+    }*/
 
     render() {
         return (
             <nav>
-                <div className={styles.navWide}>
-                    <div className={styles.wideDiv}>
+                <div className="navWide">
+                    <div className="wideDiv">
                         <a href="/">SPowerz</a>
                         <a href="/">Solutions</a>
                         <a href="/">Products</a>
                         <a href="/">Clients</a>
                     </div>
                 </div>
-                <div className={styles.navNarrow}>
-                    {/*let iclass = classNames({
-                    'styles.fa': true,
-                    'styles.fa-bars': true,
-                    'styles.fa-2x': true
-                });*/}
-                    <i className={styles.fa} onClick={this.burgerToggle}></i>
-                    <div className={styles.narrowLinks}>
+                <div className="navNarrow">
+                    <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
+                    <div className="narrowLinks">
                         <a href="/" onClick={this.burgerToggle}>SPowerz</a>
                         <a href="/" onClick={this.burgerToggle}>Solutions</a>
                         <a href="/" onClick={this.burgerToggle}>Products</a>
