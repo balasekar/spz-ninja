@@ -33,21 +33,19 @@ module.exports = {
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: [
+    // We ship a few polyfills by default:
+    require.resolve('./polyfills'),
     // Include an alternative client for WebpackDevServer. A client's job is to
     // connect to WebpackDevServer by a socket and get notified about changes.
     // When you save a file, the client will either apply hot updates (in case
     // of CSS changes), or refresh the page (in case of JS changes). When you
     // make a syntax error, this client will display a syntax error overlay.
     // Note: instead of the default WebpackDevServer client, we use a custom one
-    // to bring better experience for Create React App users. You can replace
+    // to bring better experience for Create React app users. You can replace
     // the line below with these two lines if you prefer the stock client:
     // require.resolve('webpack-dev-server/client') + '?/',
     // require.resolve('webpack/hot/dev-server'),
     require.resolve('react-dev-utils/webpackHotDevClient'),
-    // We ship a few polyfills by default:
-    require.resolve('./polyfills'),
-    // Errors should be considered fatal in development
-    require.resolve('react-error-overlay'),
     // Finally, this is your app's code:
     paths.appIndexJs,
     // We include the app code last so that if there is a runtime error during
@@ -111,21 +109,21 @@ module.exports = {
 
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
-        {
-            test: /\.(js|jsx)$/,
-            enforce: 'pre',
-            use: [
-                {
-                    options: {
-                        formatter: eslintFormatter,
-                        eslintPath: require.resolve('eslint'),
-
-                    },
-                    loader: require.resolve('eslint-loader'),
-                },
-            ],
-            include: paths.appSrc,
-        },
+      {
+        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              formatter: eslintFormatter,
+              eslintPath: require.resolve('eslint'),
+              
+            },
+            loader: require.resolve('eslint-loader'),
+          },
+        ],
+        include: paths.appSrc,
+      },
       {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
@@ -134,14 +132,14 @@ module.exports = {
           // "url" loader works like "file" loader except that it embeds assets
           // smaller than specified limit in bytes as data URLs to avoid requests.
           // A missing `test` is equivalent to a match.
-          {
-            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-            loader: require.resolve('url-loader'),
-            options: {
-              limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
+            {
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                loader: require.resolve('url-loader'),
+                options: {
+                    limit: 10000,
+                    name: 'static/media/[name].[hash:8].[ext]',
+                },
             },
-          },
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
@@ -167,9 +165,7 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                    importLoaders: 1,
-                    modules: true,
-                    localIdentName: "[name]__[local]___[hash:base64:5]"
+                  importLoaders: 1,
                 },
               },
               {
@@ -194,16 +190,6 @@ module.exports = {
               },
             ],
           },
-            {
-                test: /\.scss$/,
-                use: [{
-                    loader: "style-loader" // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader: "sass-loader" // compiles Sass to CSS
-                }]
-            },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
@@ -267,6 +253,7 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty',
+    child_process: 'empty',
   },
   // Turn off performance hints during development because we don't do any
   // splitting or minification in interest of speed. These warnings become
