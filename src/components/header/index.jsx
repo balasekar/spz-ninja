@@ -5,7 +5,6 @@ import NavigationHome from 'material-ui/svg-icons/action/home';
 import RaisedButton from 'material-ui/RaisedButton';
 
 function handleTouchTap() {
-    alert('onClick triggered on the title component');
 }
 
 const styles = {
@@ -37,6 +36,7 @@ class Header extends Component {
                 onTitleTouchTap={handleTouchTap}
                 iconElementLeft={<IconButton href="/" ><NavigationHome /></IconButton>}
                 iconElementRight={menuList}
+                style={{ margin: 0 }}
             />
         );
     }

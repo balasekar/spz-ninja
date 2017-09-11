@@ -1,0 +1,7 @@
+.homeContainer {
+    height: 500px;
+    display: block;
+    position: relative;
+    background-image: url("./home1.jpg");
+}
+
