@@ -22,13 +22,13 @@ const navbarInstance = (
             <Navbar.Brand>
                 <a href="/">
                     <img className='App-logo' alt={"SPZ"} src={Logo} />
-                    SPowerz
+                    <span className="App-title">SPowerz</span>
                 </a>
             </Navbar.Brand>
             <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-            <Nav pullRight>
+            <Nav pullRight className="Nav-button">
                 <NavItem eventKey={1} onClick={handleClick} href="/solutions">Solutions</NavItem>
                 <NavItem eventKey={2} onClick={handleClick} href="/products">Products</NavItem>
                 <NavItem eventKey={3} onClick={handleClick} href="/clients">Clients</NavItem>

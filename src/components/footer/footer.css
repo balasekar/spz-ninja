@@ -1,0 +1,33 @@
+.footer{
+    background-color: #2d2d2d;
+}
+
+.footer_certificates{
+}
+
+.footer_img{
+}
+
+.footer_socio_icons{
+    align-content: right;
+}
+
+.footer__some-network {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 15px;
+    text-align: center;
+    float: right;
+}
+.footer__some-network__share-count {
+    margin-top: 3px;
+    font-size: 12px;
+}
+.footer__some-network__share-button {
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.footer__some-network__share-button:hover:not(:active) {
+    opacity: 0.75;
+}
