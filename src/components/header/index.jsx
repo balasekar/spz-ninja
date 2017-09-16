@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
+import IndexLinkContainer from 'react-router-bootstrap/lib/IndexLinkContainer';
 
 import Logo from './logo/logo.png';
 import './header.css';
@@ -20,18 +21,26 @@ const navbarInstance = (
     <Navbar inverse collapseOnSelect fixedTop={"true"}>
         <Navbar.Header>
             <Navbar.Brand>
-                <a href="/">
-                    <img className="App-logo" alt={"SPZ"} src={Logo} />
-                    <span className="App-title">SPowerz</span>
-                </a>
+                <IndexLinkContainer to="/">
+                    <a href="/">
+                        <img className="App-logo" alt={"SPZ"} src={Logo}/>
+                        <span className="App-title">SPowerz</span>
+                    </a>
+                </IndexLinkContainer>
             </Navbar.Brand>
-            <Navbar.Toggle />
+            <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
             <Nav pullRight className="Nav-button">
-                <NavItem eventKey={1} onClick={handleClick} href="/solutions">Solutions</NavItem>
-                <NavItem eventKey={2} onClick={handleClick} href="/products">Products</NavItem>
-                <NavItem eventKey={3} onClick={handleClick} href="/clients">Clients</NavItem>
+                <IndexLinkContainer to="/solutions">
+                    <NavItem eventKey={1} onClick={handleClick} href="/solutions">Solutions</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer to="/products">
+                    <NavItem eventKey={2} onClick={handleClick} href="/products">Products</NavItem>
+                </IndexLinkContainer>
+                <IndexLinkContainer to="/clients">
+                    <NavItem eventKey={3} onClick={handleClick} href="/clients">Clients</NavItem>
+                </IndexLinkContainer>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
