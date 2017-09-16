@@ -1,6 +1,9 @@
 .footer{
     background-color: #2d2d2d;
     color: azure;
+    position: fixed;
+    Width: 100%;
+    bottom: 0;
 }
 .footer_socio_icons{
     align-content: right;

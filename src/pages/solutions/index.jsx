@@ -25,7 +25,7 @@ const SSLTitle = (
 class About extends Component {
     render() {
         return (
-                <Grid>
+                <Grid className="app_container">
                     <Row>
                         <Panel className="solution_panel" header={EMSTitle} bsStyle="info">
                             <Col xs={12} md={6}>

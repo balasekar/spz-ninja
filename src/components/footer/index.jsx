@@ -29,7 +29,7 @@ class Footer extends Component {
             <footer>
                 <div className="footer">
                     <Grid>
-                        <Row className="footer">
+                        <Row>
                             <Col xs={6} md={6}>
                                 <img src={ISO} alt="ISO" className="footer__certificates" />
                                 <img src={IAF} alt="IAF" className="footer__certificates" />

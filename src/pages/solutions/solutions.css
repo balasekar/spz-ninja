@@ -19,3 +19,7 @@
     position:relative;
     margin-top:20%;
 }
+
+.app_container {
+    padding: 65px 0;
+}

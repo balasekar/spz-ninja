@@ -17,7 +17,7 @@ function handleClick(e) {
 }
 
 const navbarInstance = (
-    <Navbar inverse collapseOnSelect>
+    <Navbar inverse collapseOnSelect fixedTop={"true"}>
         <Navbar.Header>
             <Navbar.Brand>
                 <a href="/">

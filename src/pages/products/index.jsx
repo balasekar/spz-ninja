@@ -21,7 +21,7 @@ const ProductsTitle = (
 class About extends Component {
     render() {
         return (
-            <Grid>
+            <Grid className="app_container">
                 <Row className="solution_row" >
                     <Panel className="product_panel" header={ProductsTitle} bsStyle="info">
                         <Col xs={6} md={4}>
