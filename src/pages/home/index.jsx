@@ -6,13 +6,13 @@ class Home extends Component {
     render() {
             let textStyle = {
                 position: 'absolute',
-                top: '75%',
+                top: '50%',
                 left: '5%'
             };
 
             return (
                 <div style={{width: 'auto'}}>
-                    <img className="imgBG" src={imageSrc}>
+                    <img className="imgBG" alt="BG_IMG" src={imageSrc}>
                     </img>
                     <div style={textStyle}>
                     <h1>Building Power Automation</h1>

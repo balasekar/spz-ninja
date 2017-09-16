@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import Home from '../../containers/home/index';
-import Solutions from '../../containers/solutions/index';
-import Products from '../../containers/products/index';
-import Clients from '../../containers/clients/index';
+import Home from '../../pages/home/index';
+import Solutions from '../../pages/solutions/index';
+import Products from '../../pages/products/index';
+import Clients from '../../pages/clients/index';
 
 class Body extends Component {
     render() {
