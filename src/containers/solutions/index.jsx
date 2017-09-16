@@ -3,6 +3,8 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Panel from 'react-bootstrap/lib/Panel';
+import Button from 'react-bootstrap/lib/Button';
+
 import EMSImg from './images/EMS.jpg';
 import AMRImg from './images/AMR.jpg';
 import "./solutions.css";
@@ -39,20 +41,39 @@ class About extends Component {
                                     <li> Hotels </li>
                                     <li> Industries </li>
                                 </ul>
+                                <Row>
+                                    <Col xs={8} md={5}/>
+                                    <Col xs={4} md={1}>
+                                        <Button bsStyle='primary' bsSize='large' href={"/solutions"}>Ask for
+                                            Quote</Button>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Panel>
                     </Row>
                     <Row>
                         <Panel header={AMRTitle} bsStyle="primary">
                             <Col xs={12} md={6}>
+                                <img className="solution_image" src={AMRImg} alt="Automation Meter Reading"/>
+                            </Col>
+                            <Col xs={12} md={6}>
                                 <p>
                                     SPZ is proud to introduce an energy management solution, through Power Line Communication.
                                     The system offers Energy consumption details (EB and DG separately) of a building,
                                     floor-wise or tenant-wise based on the topography of building.
                                 </p>
-                            </Col>
-                            <Col xs={12} md={6}>
-                                <img className="solution_image" src={AMRImg} alt="Automation Meter Reading"/>
+                                <ul>
+                                    <li> HT Consumers </li>
+                                    <li> LT Consumers </li>
+                                    <li> Commercial Buildings </li>
+                                    <li> Hotels </li>
+                                    <li> Industries </li>
+                                </ul>
+                                <Col xs={8} md={5}/>
+                                <Col xs={4} md={1}>
+                                    <Button bsStyle='primary' bsSize='large' href={"/solutions"}>Ask for
+                                        Quote</Button>
+                                </Col>
                             </Col>
                         </Panel>
                     </Row>

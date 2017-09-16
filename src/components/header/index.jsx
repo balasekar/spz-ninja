@@ -21,7 +21,7 @@ const navbarInstance = (
         <Navbar.Header>
             <Navbar.Brand>
                 <a href="/">
-                    <img className='App-logo' alt={"SPZ"} src={Logo} />
+                    <img className="App-logo" alt={"SPZ"} src={Logo} />
                     <span className="App-title">SPowerz</span>
                 </a>
             </Navbar.Brand>

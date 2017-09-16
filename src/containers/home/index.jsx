@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/lib/Button';
-import Grid from 'react-bootstrap/lib/Grid';
-import Jumbotron from 'react-bootstrap/lib/Jumbotron';
+import imageSrc from './images/default.jpg';
 import './home.css';
 
 class Home extends Component {
     render() {
-        return (
-            <div>
-                <Jumbotron>
-                    <Grid>
-                        <h1>Building Automation</h1>
-                        <p>SPowerz provides customers with a safe, comfortable, healthy, energy-saving, proactive and sustainable power monitoring</p>
-                        <p><Button bsStyle='primary' bsSize='large' href={"/solutions"}>Learn more »</Button></p>
-                    </Grid>
-                </Jumbotron>
-            </div>
-        );
+            let textStyle = {
+                position: 'absolute',
+                top: '75%',
+                left: '5%'
+            };
+
+            return (
+                <div style={{width: 'auto'}}>
+                    <img className="imgBG" src={imageSrc}>
+                    </img>
+                    <div style={textStyle}>
+                    <h1>Building Power Automation</h1>
+                    <p className="homeContent">SPowerz provides customers with a safe, comfortable, healthy, energy-saving, proactive and sustainable power monitoring</p>
+                    </div>
+                </div>
+            );
     }
 }
 

@@ -6,10 +6,6 @@ import Solutions from '../../containers/solutions/index';
 import Products from '../../containers/products/index';
 import Clients from '../../containers/clients/index';
 
-
-
-import './body.css';
-
 class Body extends Component {
     render() {
         return (

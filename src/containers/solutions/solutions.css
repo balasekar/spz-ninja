@@ -6,3 +6,7 @@
 .solution_panel {
     margin: 15px 0 15px 0;
 }
+
+.solution_button {
+    float: right !important;
+}
