@@ -8,13 +8,13 @@ import Logo from './logo/logo.png';
 import './header.css';
 
 function handleClick(e) {
-    if (this.props.disabled) {
+/*    if (this.props.disabled) {
         e.preventDefault();
     } else {
         if (this.props.onSelect) {
             this.props.onSelect(this.props.eventKey, e);
         }
-    }
+    }*/
 }
 
 const navbarInstance = (

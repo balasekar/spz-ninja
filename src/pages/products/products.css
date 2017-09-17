@@ -5,13 +5,13 @@
     height: 85vh;
 }
 .product_div{
-    height: 33vh;
+    height: 33%;
 }
 
 .product_div__heading{
     font-size: 3vh;
     width: 100%;
-    background-color: cornflowerblue;
+    background-color: #d1e9f5;
     font-weight: bold;
     text-align: center;
 }

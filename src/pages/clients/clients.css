@@ -2,7 +2,24 @@
     margin: 1% 1.5%;
     background-color: white;
     border: 0;
-    height: 88vh;
+    height: auto;
+    width: 100%;
+}
+.product_div{
+    height: 33%;
+    float: left;
+}
+
+.product_div__heading{
+    font-size: 3vh;
+    width: 100%;
+    background-color: #d1e9f5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product_div__content{
+    font-size: 2vh;
 }
 
 .app_container {
