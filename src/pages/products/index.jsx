@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Thumbnail from 'react-bootstrap/lib/Thumbnail';
 import Panel from 'react-bootstrap/lib/Panel';
-import Button from 'react-bootstrap/lib/Button';
 
 import DCImg from './images/DC.jpg';
 import MFMImg from './images/MFM.jpg';
 import DCEMImg from './images/DCEM.jpg';
 import PMImg from './images/PM.jpg';
 import UMImg from './images/UM.jpg';
+import SMImg from './images/SM.jpg';
 
 import './products.css';
 
@@ -22,52 +21,50 @@ class About extends Component {
     render() {
         return (
             <Grid className="app_container">
-                <Row className="solution_row" >
-                    <Panel className="product_panel" header={ProductsTitle} bsStyle="info">
-                        <Col xs={6} md={4}>
-                            <div className="product_div">
-                                <Thumbnail src={DCImg} alt="Demand Controller">
-                                    <h4>Demand Controller</h4>
-                                    <p>This is a demand controller.
-                                        <Button className="product_button" bsStyle="info">Ask for price</Button>
-                                    </p>
-                                </Thumbnail>
-                            </div>
-                        </Col>
-                        <Col xs={6} md={4}>
+                <Panel className="product_panel" header={ProductsTitle} bsStyle="info">
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
+                            <Thumbnail src={DCImg} alt="Demand Controller">
+                                <div className="product_div__heading">Demand Controller</div>
+                            </Thumbnail>
+                        </div>
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
                             <Thumbnail src={MFMImg} alt="Multifunctional Meters">
-                                <h4>Multifunctional Meters</h4>
-                                <p>This is a multi functional meter
-                                    <Button  className="product_button" bsStyle="info">Ask for price</Button>
-                                </p>
+                                <div className="product_div__heading">Multi Meters</div>
                             </Thumbnail>
-                        </Col>
-                        <Col xs={6} md={4}>
+                        </div>
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
                             <Thumbnail src={DCEMImg} alt="DC Energy Meter">
-                                <h4>DC Energy Meter</h4>
-                                <p>This is a DC Energy Meter
-                                    <Button  className="product_button" bsStyle="info">Ask for price</Button>
-                                </p>
+                                <div className="product_div__heading">DCEnergy Meter</div>
                             </Thumbnail>
-                        </Col>
-                        <Col xs={6} md={4}>
+                        </div>
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
+                            <Thumbnail src={SMImg} alt="Solar Energy Meter">
+                                <div className="product_div__heading">Solar Meter</div>
+                            </Thumbnail>
+                        </div>
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
                             <Thumbnail src={PMImg} alt="Panel Meters">
-                                <h4>Panel Meters</h4>
-                                <p>These are Panel Meters
-                                    <Button  className="product_button" bsStyle="info">Ask for price</Button>
-                                </p>
+                                <div className="product_div__heading">Panel Meters</div>
                             </Thumbnail>
-                        </Col>
-                        <Col xs={6} md={4}>
+                        </div>
+                    </Col>
+                    <Col xs={6} md={4}>
+                        <div className="product_div">
                             <Thumbnail src={UMImg} alt="Utility Meters">
-                                <h4>Utility Meters</h4>
-                                <p>This is a utility meter
-                                    <Button  className="product_button" bsStyle="info">Ask for price</Button>
-                                </p>
+                                <div className="product_div__heading">Utility Meters</div>
                             </Thumbnail>
-                        </Col>
-                    </Panel>
-                </Row>
+                        </div>
+                    </Col>
+                </Panel>
             </Grid>
         );
     }
