@@ -1,25 +1,2 @@
-.solution_image {
-    height: 100%;
-    width: 100%;
-    margin: 0.5% 0;
-}
-
-.solution_panel {
-    margin: 1% 1.5%;
-    background-color: white;
-    border: 0;
-}
-
-.solution_row {
-    height: 45vh;
-}
-
-.solution_button {
-    float: right;
-    position:relative;
-    margin-top:20%;
-}
-
 .app_container {
-    padding: 65px 0;
-}
+  padding: 65px 0; }

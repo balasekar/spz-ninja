@@ -1,0 +1,20 @@
+.solution{
+  &_image{
+    height: 100%;
+    width: 100%;
+    margin: 0.5% 0;
+  }
+  &_panel{
+    margin: 1% 1.5%;
+    background-color: white;
+    border: 0;
+  }
+  &_row{
+    height: 45vh;
+  }
+  &_button{
+    float: right;
+    position: relative;
+    margin-top: 20%;
+  }
+}
