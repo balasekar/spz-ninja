@@ -1,29 +1,11 @@
 .product_panel {
-    margin: 1% 1.5%;
-    background-color: white;
-    border: 0;
-    height: 85vh;
-}
-.product_div{
-    height: 33%;
-}
-
-.product_div__heading{
-    font-size: 3vh;
-    width: 100%;
-    background-color: #d1e9f5;
-    font-weight: bold;
-    text-align: center;
-}
-
-.product_div__content{
-    font-size: 2vh;
-}
-
-.product_button {
-    float: right;
-}
+  margin: 1% 1.5%;
+  background-color: white;
+  border: 0;
+  height: 85vh; }
 
 .app_container {
-    padding: 65px 0;
-}
+  padding: 65px 0; }
+
+* {
+  box-sizing: border-box; }

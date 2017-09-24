@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
-import SolutionPanel from '../../components/solutionPanel/solutionPanel';
+import SolutionPanel from '../../components/solution/index';
 import EMSImg from './images/EMS.jpg';
 import AMRImg from './images/AMR.jpg';
 import SSLImg from './images/SSL.jpg';

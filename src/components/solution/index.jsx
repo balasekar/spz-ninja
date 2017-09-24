@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/lib/Col';
 import Panel from 'react-bootstrap/lib/Panel';
 import Button from 'react-bootstrap/lib/Button';
 
-import "./solutionPanel.css";
+import "./solution.css";
 
 export default class SolutionPanel extends React.PureComponent {
     render() {

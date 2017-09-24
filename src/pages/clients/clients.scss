@@ -1,0 +1,18 @@
+.client {
+  &_panel {
+    margin: 1% 1.5%;
+    background-color: white;
+    border: 0;
+    height: 85vh;
+  }
+}
+
+.app {
+  &_container {
+    padding: 65px 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

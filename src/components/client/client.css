@@ -1,0 +1,19 @@
+.client__img {
+  width: 100%;
+  height: auto; }
+
+.client__heading {
+  font-size: 3vh;
+  width: 100%;
+  background-color: #d1e9f5;
+  font-weight: bold;
+  text-align: center; }
+
+.client__div {
+  background: #fff;
+  margin-bottom: 20px;
+  border: 1px solid dimgray;
+  box-sizing: border-box; }
+
+* {
+  box-sizing: border-box; }
