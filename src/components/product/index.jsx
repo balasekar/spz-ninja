@@ -11,7 +11,7 @@ export default class Product extends React.PureComponent {
         return (
             <Col xs={6} md={4} lg={3}>
                 <div className="product__div">
-                        <img className="product__img" src={image} alt={title}/>
+                        <img className="product__img" src={require('../../images/products/'+image+'.jpg')} alt={title}/>
                         <div className="product__heading">{title}</div>
                 </div>
             </Col>
@@ -20,12 +20,12 @@ export default class Product extends React.PureComponent {
 }
 
 Product.propTypes = {
-    image: PropTypes.object,
+    image: PropTypes.string,
     title: PropTypes.string
 };
 
 Product.defaultProps = {
-    image: null,
+    image: 'DC',
     title: ''
 };
 

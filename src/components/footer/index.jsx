@@ -4,13 +4,9 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import { ShareButtons, generateShareIcon } from 'react-share';
 
-import ISO from './images/i1.png';
-import IAF from './images/i2.png';
-import ANZ from './images/i3.png';
-import CE from './images/i5.png';
-
 import "./footer.css";
 
+const certificates = ['i1', 'i2', 'i3', 'i5'];
 const {
     FacebookShareButton,
     GooglePlusShareButton,
@@ -31,10 +27,11 @@ class Footer extends Component {
                     <Grid>
                         <Row>
                             <Col xs={6} md={6}>
-                                <img src={ISO} alt="ISO" className="footer__certificates" />
-                                <img src={IAF} alt="IAF" className="footer__certificates" />
-                                <img src={ANZ} alt="ANX" className="footer__certificates" />
-                                <img src={CE} alt="CE" className="footer__certificates" />
+                                {
+                                    certificates.map(item => (
+                                        <img src={require('../../images/certificates/'+item+'.png')} alt={item} className="footer__certificates" />
+                                    ))
+                                }
                             </Col>
                             <Col xs={2} md={2}>
                             </Col>

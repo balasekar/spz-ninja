@@ -1,0 +1,330 @@
+
+@mixin icon {
+  font-family: 'myenergy-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  @include icon;
+}
+
+
+.icon-menu-appliance:before {
+  content: "\e913";
+}
+.icon-menu-detailed-history:before {
+  content: "\e90e";
+}
+.icon-menu-energy-saving:before {
+  content: "\e90f";
+}
+.icon-menu-home-spend:before {
+  content: "\e910";
+}
+.icon-menu-house:before {
+  content: "\e911";
+}
+.icon-menu-usage-comparison:before {
+  content: "\e912";
+}
+.icon-minus:before {
+  content: "\e90c";
+}
+.icon-plus:before {
+  content: "\e90d";
+}
+.icon-usage-comparison:before {
+  content: "\e90b";
+}
+.icon-not-available-data:before {
+  content: "\e90a";
+}
+.icon-estimated:before {
+  content: "\e908";
+}
+.icon-warning-icon:before {
+  content: "\e934";
+}
+.icon-warning-icon2:before {
+  content: "\e935";
+}
+.icon-zoom-out:before {
+  content: "\e600";
+}
+.icon-zoom-in:before {
+  content: "\e601";
+}
+.icon-weekday:before {
+  content: "\e602";
+}
+.icon-washing-machine:before {
+  content: "\e603";
+}
+.icon-wall-insulation:before {
+  content: "\e604";
+}
+.icon-vcr:before {
+  content: "\e605";
+}
+.icon-tv:before {
+  content: "\e606";
+}
+.icon-tumble-dryer:before {
+  content: "\e607";
+}
+.icon-tick:before {
+  content: "\e608";
+}
+.icon-thermostat:before {
+  content: "\e609";
+}
+.icon-solar:before {
+  content: "\e60a";
+}
+.icon-shower:before {
+  content: "\e60b";
+}
+.icon-settopbox:before {
+  content: "\e60c";
+}
+.icon-home-profile:before {
+  content: "\e60d";
+}
+.icon-terrace:before {
+  content: "\e60e";
+}
+.icon-semi-detached:before {
+  content: "\e60f";
+}
+.icon-flat:before {
+  content: "\e610";
+}
+.icon-detached:before {
+  content: "\e611";
+}
+.icon-bungalow:before {
+  content: "\e612";
+}
+.icon-person:before {
+  content: "\e613";
+}
+.icon-overview:before {
+  content: "\e62a";
+}
+.icon-occupancy:before {
+  content: "\e614";
+}
+.icon-occasion:before {
+  content: "\e615";
+}
+.icon-multi-star:before {
+  content: "\e616";
+}
+.icon-microwave:before {
+  content: "\e617";
+}
+.icon-lightning:before {
+  content: "\e618";
+}
+.icon-lightbulb-incandescent:before {
+  content: "\e619";
+}
+.icon-lightbulb-halogen:before {
+  content: "\e61a";
+}
+.icon-lightbulb-fluorescent:before {
+  content: "\e61b";
+}
+.icon-lamp:before {
+  content: "\e61c";
+}
+.icon-kettle:before {
+  content: "\e61d";
+}
+.icon-invest-small:before {
+  content: "\e61e";
+}
+.icon-invest-big:before {
+  content: "\e61f";
+}
+.icon-house:before {
+  content: "\e620";
+}
+.icon-house-silhouette:before {
+  content: "\e621";
+}
+.icon-home:before {
+  content: "\e622";
+}
+.icon-holiday:before {
+  content: "\e623";
+}
+.icon-help:before {
+  content: "\e624";
+}
+.icon-heating:before {
+  content: "\e625";
+}
+.icon-glazing:before {
+  content: "\e626";
+}
+.icon-gear:before {
+  content: "\e627";
+}
+.icon-gas:before {
+  content: "\e628";
+}
+.icon-game-controller:before {
+  content: "\e629";
+}
+.icon-fridge:before {
+  content: "\e62b";
+}
+.icon-fridge-freezer:before {
+  content: "\e62c";
+}
+.icon-freezer:before {
+  content: "\e641";
+}
+.icon-fire:before {
+  content: "\e62d";
+}
+.icon-expand:before {
+  content: "\e62e";
+}
+.icon-energy-save:before {
+  content: "\e62f";
+}
+.icon-similar_homes:before {
+  content: "\e630";
+}
+.icon-electric-fan:before {
+  content: "\e631";
+}
+.icon-dvd:before {
+  content: "\e632";
+}
+.icon-dual-fuel:before {
+  content: "\e633";
+}
+.icon-dishwasher:before {
+  content: "\e634";
+}
+.icon-curtains:before {
+  content: "\e635";
+}
+.icon-cost:before {
+  content: "\e636";
+}
+.icon-cooker:before {
+  content: "\e637";
+}
+.icon-computer-laptop:before {
+  content: "\e638";
+}
+.icon-computer-desktop:before {
+  content: "\e639";
+}
+.icon-compare:before {
+  content: "\e63a";
+}
+.icon-collapse:before {
+  content: "\e63b";
+}
+.icon-close:before {
+  content: "\e63c";
+}
+.icon-chevron-up:before {
+  content: "\e63d";
+}
+.icon-chevron-right:before {
+  content: "\e63e";
+}
+.icon-chevron-right-big:before {
+  content: "\e63f";
+}
+.icon-chevron-left:before {
+  content: "\e640";
+}
+.icon-chevron-left-big:before {
+  content: "\e644";
+}
+.icon-chevron-down:before {
+  content: "\e642";
+}
+.icon-chart:before {
+  content: "\e643";
+}
+.icon-charger:before {
+  content: "\e645";
+}
+.icon-calendar:before {
+  content: "\e653";
+}
+.icon-bubble:before {
+  content: "\e646";
+}
+.icon-breakdown:before {
+  content: "\e647";
+}
+.icon-boiler:before {
+  content: "\e648";
+}
+.icon-behave-good:before {
+  content: "\e649";
+}
+.icon-bed:before {
+  content: "\e64a";
+}
+.icon-socket:before {
+  content: "\e64b";
+}
+.icon-attention:before {
+  content: "\e64f";
+}
+.icon-iron:before {
+  content: "\e650";
+}
+.icon-electricity:before {
+  content: "\e651";
+}
+.icon-uniE651:before {
+  content: "\e652";
+}
+.icon-ico-combined:before {
+  content: "\e902";
+}
+.icon-ico-gas:before {
+  content: "\e900";
+}
+.icon-ico-elec:before {
+  content: "\e901";
+}
+.icon-not-available:before {
+  content: "\e903";
+}
+.icon-warning:before {
+  content: "\e904";
+}
+.icon-spend-calendar:before {
+  content: "\e905";
+}
+.icon-btn-history-icon:before {
+  content: "\e906";
+}
+.icon-btn-history-arrow:before {
+  content: "\e907";
+}
+.icon-change:before {
+  content: "\e909";
+}

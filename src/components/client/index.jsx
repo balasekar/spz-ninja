@@ -11,7 +11,7 @@ export default class Client extends React.PureComponent {
         return (
             <Col xs={6} md={4} lg={3}>
                 <div className="client__div">
-                    <img className="client__img" src={image} alt={title}/>
+                    <img className="client__img" src={require('../../images/clients/'+image+'.png')} alt={title}/>
                     <div className="client__heading">{title}</div>
                 </div>
             </Col>
@@ -20,12 +20,12 @@ export default class Client extends React.PureComponent {
 }
 
 Client.propTypes = {
-    image: PropTypes.object,
+    image: PropTypes.string,
     title: PropTypes.string
 };
 
 Client.defaultProps = {
-    image: null,
+    image: 'BSNL',
     title: ''
 };
 

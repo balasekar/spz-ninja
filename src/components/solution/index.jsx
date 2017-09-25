@@ -14,7 +14,7 @@ export default class SolutionPanel extends React.PureComponent {
         return (
             <Panel className="solution_panel" header={<h2>{title}</h2>} bsStyle="info">
                 <Col xs={12} md={6}>
-                    <img className="solution_image" src={image} alt={title}/>
+                    <img className="solution_image" src={require('../../images/solutions/'+image+'.jpg')} alt={title}/>
                 </Col>
                 <Col xs={12} md={6}>
                     <p>
@@ -40,7 +40,7 @@ SolutionPanel.propTypes = {
 };
 
 SolutionPanel.defaultProps = {
-    image: null,
+    image: 'DC',
     title: '',
     desc: '',
     implementations: []

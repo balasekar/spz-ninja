@@ -1,0 +1,94 @@
+@import "./breakpoints";
+@import "./colours";
+
+@font-face {
+    font-family: 'myenergy-icons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/icons.woff2') format('woff2'), url('fonts/icons.woff') format('woff'), url('fonts/icons.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bariol';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/bariol.woff');
+}
+
+@font-face {
+    font-family: 'bariol';
+    font-weight: bold;
+    font-style: normal;
+    src: url('fonts/bariol-bold.woff');
+}
+
+body {
+  font-family: "Bariol", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  color: $mako;
+}
+
+p, div {
+  font-size: 14px;
+}
+
+h1 {
+  font-family: bariol;
+  font-size: 34px;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: bariol;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: bariol;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h4 {
+  font-family: bariol;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@include for-desktop-up {
+  p, div {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-family: bariol;
+    font-size: 36px;
+    font-weight: normal;
+  }
+  
+  h2 {
+    font-family: bariol;
+    font-size: 30px;
+    font-weight: normal;
+  }
+  
+  h3 {
+    font-family: bariol;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  h4 {
+    font-family: bariol;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+

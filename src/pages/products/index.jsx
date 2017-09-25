@@ -5,13 +5,6 @@ import Panel from 'react-bootstrap/lib/Panel';
 
 import Product from '../../components/product/index';
 
-import DCImg from './images/DC.jpg';
-import MFMImg from './images/MFM.jpg';
-import DCEMImg from './images/DCEM.jpg';
-import PMImg from './images/PM.jpg';
-import UMImg from './images/UM.jpg';
-import SMImg from './images/SM.jpg';
-
 import './products.css';
 
 class About extends Component {
@@ -20,12 +13,12 @@ class About extends Component {
             <Grid className="app_container">
                 <Panel className="product_panel" header={<h2>PRODUCTS</h2>} bsStyle="info">
                     <Row>
-                        <Product image={DCImg} title="Demand Controller"/>
-                        <Product image={MFMImg} title="Multi Meters"/>
-                        <Product image={DCEMImg} title="DCEnergy Meter"/>
-                        <Product image={PMImg} title="Panel Meters"/>
-                        <Product image={UMImg} title="Utility Meters"/>
-                        <Product image={SMImg} title="Solar Meters"/>
+                        <Product image="DC" title="Demand Controller"/>
+                        <Product image="MFM" title="Multi Meters"/>
+                        <Product image="DCEM" title="DCEnergy Meter"/>
+                        <Product image="PM" title="Panel Meters"/>
+                        <Product image="UM" title="Utility Meters"/>
+                        <Product image="SM" title="Solar Meters"/>
                     </Row>
                 </Panel>
             </Grid>

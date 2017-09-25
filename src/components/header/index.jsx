@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import IndexLinkContainer from 'react-router-bootstrap/lib/IndexLinkContainer';
 
-import Logo from './logo/logo.png';
+import Logo from '../../images/logo/logo.png';
 import './header.css';
 
 const navbarInstance = (

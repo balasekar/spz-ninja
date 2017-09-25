@@ -3,9 +3,6 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
 import SolutionPanel from '../../components/solution/index';
-import EMSImg from './images/EMS.jpg';
-import AMRImg from './images/AMR.jpg';
-import SSLImg from './images/SSL.jpg';
 import "./solutions.css";
 
 class About extends Component {
@@ -14,7 +11,7 @@ class About extends Component {
                 <Grid className="app_container">
                     <Row>
                         <SolutionPanel
-                            image = {EMSImg}
+                            image = "EMS"
                             title = "Energy Monitoring Solution"
                             desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
                                 The system offers Energy consumption details (EB and DG separately) of a building,
@@ -24,7 +21,7 @@ class About extends Component {
                     </Row>
                     <Row>
                         <SolutionPanel
-                            image = {AMRImg}
+                            image = "AMR"
                             title = "Automatic Meter Reading Solution"
                             desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
                                 The system offers Energy consumption details (EB and DG separately) of a building,
@@ -34,7 +31,7 @@ class About extends Component {
                     </Row>
                     <Row>
                         <SolutionPanel
-                            image = {SSLImg}
+                            image = "SSL"
                             title = "Smart Street Light Solution"
                             desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
                                 The system offers Energy consumption details (EB and DG separately) of a building,

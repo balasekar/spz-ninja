@@ -1,0 +1,26 @@
+@import "../../style/partials/colours";
+
+.footer{
+    background-color: $wild-sand;
+    position: fixed;
+    Width: 100%;
+    bottom: 0;
+    &_socio_icons{
+        align-content: right;
+    }
+    &__network {
+        margin-top: 2vh;
+        margin-right: 0.5vh;
+        float: right;
+        &__share-button {
+            cursor: pointer;
+        }
+        &__share-button:hover:not(:active) {
+            opacity: 0.75;
+        }
+    }
+    &__certificates {
+        width: 4vh;
+        height: auto;
+    }
+}

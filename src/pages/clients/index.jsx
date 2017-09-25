@@ -5,27 +5,22 @@ import Panel from 'react-bootstrap/lib/Panel';
 
 import Client from '../../components/client/index';
 
-import BSNLImg from './images/BSNL.png';
-import COLImg from './images/COL.png';
-import DLFImg from './images/DLF.png';
-import KALImg from './images/kalpakkam.png';
-import SIDCOImg from './images/SIDCO.png';
-import TATAImg from './images/TATA.png';
-
 import './clients.css';
 
 class About extends Component {
     render() {
         return (
             <Grid className="app_container">
+                <Panel className="client_panel" header={<h2>CLIENTS</h2>} bsStyle="info">
                     <Row>
-                        <Client image={BSNLImg} title="BSNL"/>
-                        <Client image={COLImg} title="COLUMBIA"/>
-                        <Client image={DLFImg} title="DLF"/>
-                        <Client image={KALImg} title="Kalpakkam"/>
-                        <Client image={SIDCOImg} title="SIDCO"/>
-                        <Client image={TATAImg} title="TATA"/>
+                        <Client image="BSNL" title="BSNL"/>
+                        <Client image="BSNL" title="BSNL"/>
+                        <Client image="BSNL" title="BSNL"/>
+                        <Client image="BSNL" title="BSNL"/>
+                        <Client image="BSNL" title="BSNL"/>
+                        <Client image="BSNL" title="BSNL"/>
                     </Row>
+                </Panel>
             </Grid>
         );
     }
