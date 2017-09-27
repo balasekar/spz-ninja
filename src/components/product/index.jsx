@@ -6,12 +6,12 @@ import Col from 'react-bootstrap/lib/Col';
 import "./product.css";
 
 export default class Product extends React.PureComponent {
-    render() {
-        const {title, image} = this.props;
-        return (
+render() {
+    const {title, image} = this.props;
+    return (
             <Col xs={6} md={4} lg={3}>
                 <div className="product__div">
-                        <img className="product__img" src={require('../../images/products/'+image+'.jpg')} alt={title}/>
+                        <img className="product__img" src={require('../../images/products/'+image.toString()+'.jpg')} alt={title}/>
                         <div className="product__heading">{title}</div>
                 </div>
             </Col>

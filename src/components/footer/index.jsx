@@ -29,7 +29,7 @@ class Footer extends Component {
                             <Col xs={6} md={6}>
                                 {
                                     certificates.map(item => (
-                                        <img src={require('../../images/certificates/'+item+'.png')} alt={item} className="footer__certificates" />
+                                        <img src={require('../../images/certificates/'+item+'.png')} alt={item} key={item} className="footer__certificates" />
                                     ))
                                 }
                             </Col>

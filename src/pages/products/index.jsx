@@ -1,24 +1,32 @@
 import React, {Component} from 'react';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Panel from 'react-bootstrap/lib/Panel';
+import {connect} from 'react-redux';
+import {PropTypes} from 'prop-types';
+
+import {fetchProducts} from '../../actionCreators';
 
 import Product from '../../components/product/index';
 
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Panel from 'react-bootstrap/lib/Panel';
 import './products.css';
 
-class About extends Component {
+class Products extends Component {
+
+    componentDidMount() {
+        const {dispatch} = this.props;
+        dispatch(fetchProducts())
+    }
+
     render() {
         return (
             <Grid className="app_container">
                 <Panel className="product_panel" header={<h2>PRODUCTS</h2>} bsStyle="info">
                     <Row>
-                        <Product image="DC" title="Demand Controller"/>
-                        <Product image="MFM" title="Multi Meters"/>
-                        <Product image="DCEM" title="DCEnergy Meter"/>
-                        <Product image="PM" title="Panel Meters"/>
-                        <Product image="UM" title="Utility Meters"/>
-                        <Product image="SM" title="Solar Meters"/>
+                        {this.props.products &&
+                        this.props.products.map((product) => (
+                            <Product image={product.image} title={product.title} key={product.id}/>
+                        ))}
                     </Row>
                 </Panel>
             </Grid>
@@ -26,4 +34,23 @@ class About extends Component {
     }
 }
 
-export default About;
+Products.propTypes = {
+    products: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array
+    ]),
+    dispatch: PropTypes.func.isRequired
+};
+
+Products.defaultProps = {
+    products: []
+};
+
+function mapStateToProps(state) {
+    const products = state.siteData.get('products');
+    return {
+        products: products || []
+    };
+}
+
+export default connect(mapStateToProps)(Products);

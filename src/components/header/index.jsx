@@ -8,7 +8,7 @@ import Logo from '../../images/logo/logo.png';
 import './header.css';
 
 const navbarInstance = (
-    <Navbar collapseOnSelect fixedTop={"true"}>
+    <Navbar collapseOnSelect fixedTop={true}>
         <Navbar.Header>
             <Navbar.Brand>
                 <IndexLinkContainer to="/">
