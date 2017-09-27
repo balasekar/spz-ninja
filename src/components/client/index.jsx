@@ -11,7 +11,7 @@ export default class Client extends React.PureComponent {
         return (
             <Col xs={6} md={4} lg={3}>
                 <div className="client__div">
-                    <img className="client__img" src={require('../../images/clients/'+image+'.png')} alt={title}/>
+                    <img className="client__img" src={require('../../images/clients/'+image)} alt={title}/>
                     <div className="client__heading">{title}</div>
                 </div>
             </Col>

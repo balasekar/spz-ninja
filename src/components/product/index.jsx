@@ -11,7 +11,7 @@ render() {
     return (
             <Col xs={6} md={4} lg={3}>
                 <div className="product__div">
-                        <img className="product__img" src={require('../../images/products/'+image.toString()+'.jpg')} alt={title}/>
+                        <img className="product__img" src={require('../../images/products/'+image.toString())} alt={title}/>
                         <div className="product__heading">{title}</div>
                 </div>
             </Col>
