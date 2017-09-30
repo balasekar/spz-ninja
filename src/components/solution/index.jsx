@@ -12,7 +12,6 @@ import "./solution.css";
 export default class SolutionPanel extends React.PureComponent {
     render() {
         const {title, image, desc, implementations} = this.props;
-        console.log('what the props:', this.props);
         return (
             <Panel className="solution_panel" header={<h2>{title}</h2>} bsStyle="info">
                 <Row>

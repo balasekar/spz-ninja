@@ -1,10 +1,12 @@
+const basePath= 'https://spz-api.herokuapp.com'|| 'http://localhost:3001';
+
 export function fetchProducts() {
     return {
         type: 'PRODUCTS',
         fetchConfig: {
             method: 'GET',
             path: '/api/product',
-            basePath: 'http://localhost:3001'
+            basePath: basePath
         }
     };
 }
@@ -15,7 +17,7 @@ export function fetchClients() {
         fetchConfig: {
             method: 'GET',
             path: '/api/client',
-            basePath: 'http://localhost:3001'
+            basePath: basePath
         }
     };
 }
@@ -26,7 +28,7 @@ export function fetchSolutions() {
         fetchConfig: {
             method: 'GET',
             path: '/api/solution',
-            basePath: 'http://localhost:3001'
+            basePath: basePath
         }
     };
 }

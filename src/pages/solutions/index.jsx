@@ -18,36 +18,6 @@ class Solutions extends Component {
     render() {
         return (
                 <Grid className="app_container">
-{/*                    <Row>
-                        <SolutionPanel
-                            image = "EMS"
-                            title = "Energy Monitoring Solution"
-                            desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
-                                The system offers Energy consumption details (EB and DG separately) of a building,
-                                floor-wise or tenant-wise based on the topography of building.Applicable for"
-                            implementations={["HT Consumers", "LT Consumers", "Commercial Buildings","Hotels","Industries"]}
-                        />
-                    </Row>
-                    <Row>
-                        <SolutionPanel
-                            image = "AMR"
-                            title = "Automatic Meter Reading Solution"
-                            desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
-                                The system offers Energy consumption details (EB and DG separately) of a building,
-                                floor-wise or tenant-wise based on the topography of building.Applicable for"
-                            implementations={["HT Consumers", "LT Consumers", "Commercial Buildings","Hotels","Industries"]}
-                        />
-                    </Row>
-                    <Row>
-                        <SolutionPanel
-                            image = "SSL"
-                            title = "Smart Street Light Solution"
-                            desc="SPZ is proud to introduce an energy management solution,through Power Line Communication.
-                                The system offers Energy consumption details (EB and DG separately) of a building,
-                                floor-wise or tenant-wise based on the topography of building.Applicable for"
-                            implementations={["HT Consumers", "LT Consumers", "Commercial Buildings","Hotels","Industries"]}
-                        />
-                    </Row>*/}
                     {this.props.solutions &&
                     this.props.solutions.map((solution) => (
                         <SolutionPanel image={solution.image} title={solution.title} desc={solution.desc}
@@ -72,7 +42,6 @@ Solutions.defaultProps = {
 
 function mapStateToProps(state) {
     const solutions = state.siteData.get('solutions');
-    console.log('What the solutions:', solutions);
     return {
         solutions: solutions || []
     };
