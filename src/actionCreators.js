@@ -1,4 +1,4 @@
-const basePath= 'https://spz-api.herokuapp.com'|| 'http://localhost:3001';
+const basePath= 'https://spz-api.herokuapp.com';
 
 export function fetchProducts() {
     return {

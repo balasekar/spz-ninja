@@ -14,11 +14,11 @@ const initialState = fromJS({
 export default (state = initialState, action) => {
     switch (action.type) {
         case PRODUCTS:
-            return state.set('products', action.data.products);
+            return state.set('products', action.data);
         case CLIENTS:
-            return state.set('clients', action.data.clients);
+            return state.set('clients', action.data);
         case SOLUTIONS:
-            return state.set('solutions', action.data.solutions);
+            return state.set('solutions', action.data);
         default :
             return state;
     }
