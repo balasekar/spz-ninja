@@ -8,13 +8,15 @@
     margin: 1% 1.5%;
     background-color: white;
     border: 0;
+    overflow:auto;
+    display:block;
   }
   &_row{
     height: 45vh;
   }
   &_button{
-    float: right;
-    position: relative;
-    margin-top: 20%;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
   }
 }

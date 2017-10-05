@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/lib/Row';
 import Panel from 'react-bootstrap/lib/Panel';
 import './products.css';
 
-class Products extends Component {
+class ProductDetail extends Component {
 
     componentDidMount() {
         const {dispatch} = this.props;
@@ -25,7 +25,7 @@ class Products extends Component {
                     <Row>
                         {this.props.products &&
                         this.props.products.map((product) => (
-                            <Product image={product.image} title={product.title} desc={product.desc} key={product.id}/>
+                            <Product image={product.image} title={product.title} key={product.id}/>
                         ))}
                     </Row>
                 </Panel>
@@ -34,7 +34,7 @@ class Products extends Component {
     }
 }
 
-Products.propTypes = {
+ProductDetail.propTypes = {
     products: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
@@ -42,7 +42,7 @@ Products.propTypes = {
     dispatch: PropTypes.func.isRequired
 };
 
-Products.defaultProps = {
+ProductDetail.defaultProps = {
     products: []
 };
 
@@ -53,4 +53,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Products);
+export default connect(mapStateToProps)(ProductDetail);

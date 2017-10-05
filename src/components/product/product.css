@@ -2,18 +2,39 @@
   width: 100%;
   height: auto; }
 
+.product__img_div {
+  width: 30%;
+  height: auto;
+  float: left; }
+
+.product__desc {
+  width: 100%;
+  height: auto; }
+
+.product__desc_div {
+  width: 70%;
+  height: auto;
+  float: left;
+  padding: 10px 5px; }
+
 .product__heading {
-  font-size: 1.8vh;
+  font-size: 3vh;
   width: 100%;
   background-color: #d1e9f5;
   font-weight: bold;
   text-align: center; }
 
+.product__button {
+  float: right;
+  position: relative; }
+
 .product__div {
-  background: #fff;
+  background: #efefef;
   margin-bottom: 20px;
   border: 1px solid dimgray;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: auto;
+  display: block; }
 
 * {
   box-sizing: border-box; }

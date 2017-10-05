@@ -3,18 +3,39 @@
     width: 100%;
     height: auto;
   }
+  &__img_div{
+    width: 30%;
+    height: auto;
+    float: left;
+  }
+  &__desc{
+    width: 100%;
+    height: auto;
+  }
+  &__desc_div{
+    width: 70%;
+    height: auto;
+    float: left;
+    padding: 10px 5px;
+  }
   &__heading {
-    font-size: 1.8vh;
+    font-size: 3vh;
     width: 100%;
     background-color: #d1e9f5;
     font-weight: bold;
     text-align: center;
   }
+  &__button{
+    float: right;
+    position: relative;
+  }
   &__div {
-    background: #fff;
+    background: #efefef;
     margin-bottom: 20px;
     border: 1px solid dimgray;
     box-sizing: border-box;
+    overflow:auto;
+    display:block;
   }
 }
 
