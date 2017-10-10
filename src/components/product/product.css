@@ -18,23 +18,26 @@
   padding: 10px 5px; }
 
 .product__heading {
-  font-size: 3vh;
+  float: left;
+  font-size: 1.2em;
   width: 100%;
-  background-color: #d1e9f5;
-  font-weight: bold;
-  text-align: center; }
+  color: #31708f;
+  font-weight: bold; }
 
 .product__button {
-  float: right;
-  position: relative; }
+  float: left;
+  position: relative;
+  margin: 10px 10px; }
 
 .product__div {
   background: #efefef;
   margin-bottom: 20px;
-  border: 1px solid dimgray;
   box-sizing: border-box;
   overflow: auto;
-  display: block; }
+  display: block;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
 
 * {
   box-sizing: border-box; }

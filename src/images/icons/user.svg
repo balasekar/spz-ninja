@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>user icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PAGES" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login" transform="translate(-435.000000, -304.000000)" fill="#E6E6E6">
+            <g id="Sing-In-Card" transform="translate(390.000000, 195.000000)">
+                <g id="content" transform="translate(30.000000, 91.000000)">
+                    <g id="username-default-input">
+                        <g id="user-icon" transform="translate(15.000000, 18.000000)">
+                            <path d="M8,8 C10.21,8 12,6.21 12,4 C12,1.79 10.21,0 8,0 C5.79,0 4,1.79 4,4 C4,6.21 5.79,8 8,8 L8,8 Z M7.5,10 C4.996875,10 -1.77635684e-15,11.1166667 -1.77635684e-15,13.3333333 L-1.77635684e-15,15 L15,15 L15,13.3333333 C15,11.1166667 10.003125,10 7.5,10 L7.5,10 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

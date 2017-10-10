@@ -12,12 +12,13 @@ export default class Product extends React.PureComponent {
         return (
             <Col xs={12} md={6}>
                 <div className="product__div">
-                    <div className="product__heading">{title}</div>
+
                     <div className="product__img_div">
                         <img className="product__img" src={require('../../images/products/' + image.toString())}
                              alt={title}/>
                     </div>
                     <div className="product__desc_div">
+                        <div className="product__heading">{title}</div>
                         <div className="product__desc">
                             {desc}
                         </div>

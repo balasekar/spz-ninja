@@ -10,6 +10,17 @@ import Button from 'react-bootstrap/lib/Button';
 import "./solution.css";
 
 export default class SolutionPanel extends React.PureComponent {
+
+    constructor(props) {
+        super(props);
+        this.askForQuote = this.askForQuote.bind(this);
+    }
+
+    askForQuote() {
+            this.props.askForQuote(this.props.title);
+    }
+
+
     render() {
         const {title, image, desc, implementations} = this.props;
         return (
@@ -28,7 +39,7 @@ export default class SolutionPanel extends React.PureComponent {
                                 <li key={implementation.value}>{implementation.value}</li>
                             ))}
                         </ul>
-                        <Button className="solution_button" bsSize="small" bsStyle="info">Ask for quote >></Button>
+                        <Button className="solution_button" bsSize="small" bsStyle="info" onClick={this.askForQuote}>Ask for quote >></Button>
                     </Col>
                 </Row>
             </Panel>
@@ -43,14 +54,17 @@ SolutionPanel.propTypes = {
     implementations: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
-    ])
+    ]),
+    askForQuote: PropTypes.func.isRequired
 };
 
 SolutionPanel.defaultProps = {
     image: 'DC.jpg',
     title: '',
     desc: '',
-    implementations: []
+    implementations: [],
+    askForQuote: null
 };
+
 
 export const SolutionContainer = connect()(SolutionPanel);
