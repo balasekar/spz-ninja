@@ -101,8 +101,8 @@ class Solutions extends Component {
                         </form>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={this.submit}>Ask For Quote</Button>
-                        <Button onClick={this.close}>Cancel</Button>
+                        <Button bsSize="small" bsStyle="info" onClick={this.submit}>Ask For Quote</Button>
+                        <Button bsSize="small" bsStyle="info" onClick={this.close}>Cancel</Button>
                     </Modal.Footer>
                 </Modal>
             </Grid>

@@ -1,0 +1,23 @@
+.productDetail {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column; }
+  .productDetail__desc {
+    order: 1;
+    background-color: #edeced;
+    height: 437px;
+    padding: 0px 40px; }
+    .productDetail__desc-item {
+      padding: 5px 10px; }
+      .productDetail__desc-item p {
+        font-size: 12px;
+        padding-left: 20px;
+        border-left: 2px solid #ffa600; }
+      .productDetail__desc-item img {
+        width: 100%;
+        height: auto; }
+      .productDetail__desc-item button {
+        margin: 50px 10px; }
+  .productDetail__features {
+    order: 1;
+    height: 437px; }

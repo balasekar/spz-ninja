@@ -1,0 +1,30 @@
+.productDetail {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  &__desc {
+    order: 1;
+    background-color: #edeced;
+    height: 437px;
+    padding: 0px 40px;
+    &-item{
+      padding: 5px 10px;
+      p {
+        font-size: 12px;
+        padding-left: 20px;
+        border-left: 2px solid #ffa600;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+      button{
+        margin: 50px 10px;
+      }
+    }
+  }
+  &__features {
+    order: 1;
+    height: 437px;
+  }
+}

@@ -5,6 +5,7 @@ import Home from '../../pages/home/index';
 import Solutions from '../../pages/solutions/index';
 import Products from '../../pages/products/index';
 import Clients from '../../pages/clients/index';
+import ProductDetails from '../../pages/productDetails/index';
 
 class Body extends Component {
     render() {
@@ -14,6 +15,7 @@ class Body extends Component {
                 <Route exact path="/solutions" component={Solutions} />
                 <Route exact path="/products" component={Products} />
                 <Route exact path="/clients" component={Clients} />
+                <Route exact path="/productDetails/:productId" component={ProductDetails} />
             </main>
         );
     }
