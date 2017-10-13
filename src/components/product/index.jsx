@@ -8,7 +8,8 @@ import "./product.css";
 
 export default class Product extends React.PureComponent {
     render() {
-        const {title, image, desc} = this.props;
+        const {title, image, desc, id} = this.props;
+        console.log('What the props:', this.props);
         return (
             <Col xs={12} md={6}>
                 <div className="product__div">
@@ -22,7 +23,7 @@ export default class Product extends React.PureComponent {
                         <div className="product__desc">
                             {desc}
                         </div>
-                        <Button className="product__button" bsSize="small" bsStyle="info">Read more >></Button>
+                        <Button className="product__button" bsSize="small" bsStyle="info"><a href={"#/productDetails/"+id}>Read more >></a></Button>
                     </div>
                 </div>
             </Col>
@@ -33,13 +34,15 @@ export default class Product extends React.PureComponent {
 Product.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
-    desc: PropTypes.string
+    desc: PropTypes.string,
+    id: PropTypes.number
 };
 
 Product.defaultProps = {
     image: 'DC',
     title: '',
-    desc:''
+    desc: '',
+    id: 1
 };
 
 export const ProductContainer = connect()(Product);

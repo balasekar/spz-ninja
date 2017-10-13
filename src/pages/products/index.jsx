@@ -19,13 +19,14 @@ class Products extends Component {
     }
 
     render() {
+        console.log('products:', this.props.products);
         return (
             <Grid className="app_container">
                 <Panel className="product_panel" header={<h2>PRODUCTS</h2>} bsStyle="info">
                     <Row>
                         {this.props.products &&
                         this.props.products.map((product) => (
-                            <Product image={product.image} title={product.title} desc={product.desc} key={product.id}/>
+                            <Product image={product.image} title={product.title} desc={product.desc} id={product.id} id={product.id}/>
                         ))}
                     </Row>
                 </Panel>
