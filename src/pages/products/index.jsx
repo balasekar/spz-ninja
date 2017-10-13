@@ -26,7 +26,7 @@ class Products extends Component {
                     <Row>
                         {this.props.products &&
                         this.props.products.map((product) => (
-                            <Product image={product.image} title={product.title} desc={product.desc} id={product.id} id={product.id}/>
+                            <Product image={product.image} title={product.title} desc={product.desc} id={product.id} key={product.id}/>
                         ))}
                     </Row>
                 </Panel>

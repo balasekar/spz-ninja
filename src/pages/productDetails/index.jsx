@@ -1,14 +1,25 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {PropTypes} from 'prop-types';
+import autobind from 'class-autobind';
 import _ from 'lodash';
-import {Grid, Row, Col, Button, Tab, Tabs, Table} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Tab, Tabs, Table, Modal} from 'react-bootstrap';
 
-import {fetchProducts} from '../../actionCreators';
+import {fetchProducts, askUserDetails, closeUserDetails, saveUserDetails} from '../../actionCreators';
 
 import './productDetails.css';
 
 class ProductDetail extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            show_overlay: props.show_overlay,
+            user: {},
+            productId: ''
+        };
+        autobind(this);
+    }
 
     componentDidMount() {
         this.props.dispatch(fetchProducts())
@@ -16,6 +27,39 @@ class ProductDetail extends Component {
 
     componentWillReceiveProps(nextProps) {
         console.log('What the props:', nextProps.match.params.productId);
+        this.setState({productId: nextProps.match.params.productId});
+    }
+
+    askForQuote = () => {
+        this.setState({show_overlay: this.state.productId});
+        this.props.dispatch(askUserDetails(this.state.productId));
+    };
+
+    submit = () => {
+        this.props.dispatch(saveUserDetails(this.state.user, this.state.show_overlay));
+    };
+
+    close = () => {
+        this.setState({show_overlay: null});
+        this.props.dispatch(closeUserDetails());
+    };
+
+    handleUserNameChange(event){
+        let user = this.state.user;
+        user.name = event.target.value;
+        this.setState({user: user});
+    }
+
+    handleUserMailIdChange(event){
+        let user = this.state.user;
+        user.email = event.target.value;
+        this.setState({user: user});
+    }
+
+    handleUserMobileNoChange(event){
+        let user = this.state.user;
+        user.mobile = event.target.value;
+        this.setState({user: user});
     }
 
     render() {
@@ -40,7 +84,7 @@ class ProductDetail extends Component {
                                         very
                                         low dielectric losses and are designed for long service life.
                                     </p>
-                                    <Button bsSize="small" bsStyle="info">Product Request</Button><br/>
+                                    <Button bsSize="small" bsStyle="info" onClick={this.askForQuote}>Product Request</Button><br/>
                                     <img src={require('@images/productDetails/industry.png')} style={{width: '100px'}}
                                          alt={'Industry'}/>
                                     <img src={require('@images/productDetails/feeder.png')}
@@ -137,6 +181,43 @@ class ProductDetail extends Component {
                             </div>
                         </div>
                     </div>
+
+                    <Modal show={!!this.state.show_overlay} onHide={this.close}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>User Details</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form>
+                                <div className="form-group">
+                                    <label htmlFor="userName">Name:</label>
+                                    <input
+                                        value={this.state.user.name}
+                                        onChange={this.handleUserNameChange}
+                                        type="text"
+                                        className="form-control"
+                                        id="userName" />
+                                    <label htmlFor="email">Email Id:</label>
+                                    <input
+                                        value={this.state.user.email}
+                                        onChange={this.handleUserMailIdChange}
+                                        type="text"
+                                        className="form-control"
+                                        id="email" />
+                                    <label htmlFor="mobile">Mobile Number:</label>
+                                    <input
+                                        value={this.state.user.mobile}
+                                        onChange={this.handleUserMobileNoChange}
+                                        type="text"
+                                        className="form-control"
+                                        id="mobile" />
+                                </div>
+                            </form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button bsSize="small" bsStyle="info" onClick={this.submit}>Submit Request</Button>
+                            <Button bsSize="small" bsStyle="info" onClick={this.close}>Cancel</Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Grid>
             </div>
         );
