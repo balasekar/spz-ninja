@@ -40,12 +40,17 @@ export function askUserDetails(solutionName) {
     };
 }
 
-export function saveUserDetails(userdetails, solutionName) {
+export function saveUserDetails(userdetails, requestedResource) {
     let userData = userdetails;
-    userData.need_solution = solutionName;
+    userData.requested_item = requestedResource;
     return {
-        type: 'SAVE_USER_DETAILS',
-        data: userData
+        type: 'SAVE_REQUEST_DETAILS',
+        fetchConfig: {
+            method: 'POST',
+            path: '/api/request',
+            body: JSON.stringify(userData),
+            basePath: basePath
+        }
     };
 }
 

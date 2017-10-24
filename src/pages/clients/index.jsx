@@ -4,11 +4,7 @@ import {PropTypes} from 'prop-types';
 
 import {fetchClients} from '../../actionCreators';
 
-import Client from '../../components/client/index';
-
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Panel from 'react-bootstrap/lib/Panel';
+import {Grid, Row, Col, Panel} from 'react-bootstrap';
 import './clients.css';
 
 class Clients extends Component {
@@ -23,10 +19,16 @@ class Clients extends Component {
             <Grid className="app_container">
                 <Panel className="client_panel" header={<h2>CLIENTS</h2>} bsStyle="info">
                     <Row>
-                        {this.props.clients &&
-                        this.props.clients.map((client) => (
-                            <Client image={client.image} title={client.title} key={client.id}/>
-                        ))}
+                        <Col xs={12} md={12} lg={12}>
+                            <div className="client__div">
+                                <img className="client__img"
+                                     src={require('../../images/clients/clients.png')} alt='Clients'/>
+                            </div>
+                            <div className="client__div">
+                                <img className="client__img"
+                                     src={require('../../images/clients/clients1.png')} alt='Partners'/>
+                            </div>
+                        </Col>
                     </Row>
                 </Panel>
             </Grid>

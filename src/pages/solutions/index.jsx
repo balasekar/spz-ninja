@@ -85,14 +85,14 @@ class Solutions extends Component {
                                     id="userName" />
                                 <label htmlFor="email">Email Id:</label>
                                 <input
-                                    value={this.state.user.email}
+                                    value={this.state.user.mail_id}
                                     onChange={this.handleUserMailIdChange}
                                     type="text"
                                     className="form-control"
                                     id="email" />
                                 <label htmlFor="mobile">Mobile Number:</label>
                                 <input
-                                    value={this.state.user.mobile}
+                                    value={this.state.user.mobile_no}
                                     onChange={this.handleUserMobileNoChange}
                                     type="text"
                                     className="form-control"
