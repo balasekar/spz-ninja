@@ -33,10 +33,10 @@ export function fetchSolutions() {
     };
 }
 
-export function askUserDetails(solutionName) {
+export function askUserDetails(resourceName) {
     return {
         type: 'ASK_USER_DETAILS',
-        data: solutionName
+        data: resourceName
     };
 }
 

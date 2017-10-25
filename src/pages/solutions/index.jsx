@@ -41,21 +41,21 @@ class Solutions extends Component {
         this.props.dispatch(closeUserDetails());
     };
 
-    handleUserNameChange(event){
+    handleUserNameChange(event) {
         let user = this.state.user;
         user.name = event.target.value;
         this.setState({user: user});
     }
 
-    handleUserMailIdChange(event){
+    handleUserMailIdChange(event) {
         let user = this.state.user;
-        user.email = event.target.value;
+        user.mail_id = event.target.value;
         this.setState({user: user});
     }
 
-    handleUserMobileNoChange(event){
+    handleUserMobileNoChange(event) {
         let user = this.state.user;
-        user.mobile = event.target.value;
+        user.mobile_no = event.target.value;
         this.setState({user: user});
     }
 
@@ -82,21 +82,21 @@ class Solutions extends Component {
                                     onChange={this.handleUserNameChange}
                                     type="text"
                                     className="form-control"
-                                    id="userName" />
+                                    id="userName"/>
                                 <label htmlFor="email">Email Id:</label>
                                 <input
                                     value={this.state.user.mail_id}
                                     onChange={this.handleUserMailIdChange}
                                     type="text"
                                     className="form-control"
-                                    id="email" />
+                                    id="email"/>
                                 <label htmlFor="mobile">Mobile Number:</label>
                                 <input
                                     value={this.state.user.mobile_no}
                                     onChange={this.handleUserMobileNoChange}
                                     type="text"
                                     className="form-control"
-                                    id="mobile" />
+                                    id="mobile"/>
                             </div>
                         </form>
                     </Modal.Body>

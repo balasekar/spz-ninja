@@ -19,7 +19,6 @@ class Products extends Component {
     }
 
     render() {
-        console.log('products:', this.props.products);
         return (
             <Grid className="app_container">
                 <Panel className="product_panel" header={<h2>PRODUCTS</h2>} bsStyle="info">

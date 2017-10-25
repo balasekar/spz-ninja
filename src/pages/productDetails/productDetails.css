@@ -1,10 +1,10 @@
 .productDetail {
   padding-top: 50px;
-  padding-bottom: 71px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column; }
   .productDetail__desc {
-    order: 1;
+    order: 3;
     background-color: #edeced;
     height: 437px;
     padding: 0px 40px; }
@@ -20,8 +20,8 @@
       .productDetail__desc-item button {
         margin: 50px 10px; }
   .productDetail__features {
-    order: 1;
-    height: 437px;
+    order: 2;
+    height: 350px;
     padding: 5px 10px; }
     .productDetail__features-benefits p {
       font-size: 12px;
@@ -29,20 +29,25 @@
       border-left: 2px solid #ffa600; }
     .productDetail__features-benefits img {
       width: auto;
-      height: 300px;
+      height: 200px;
       align-items: center; }
     .productDetail__features-configuration {
       display: flex;
-      flex-direction: row; }
+      flex-direction: column; }
       .productDetail__features-configuration p {
         order: 1;
         font-size: 12px;
         padding-left: 20px; }
-      .productDetail__features-configuration img {
+      .productDetail__features-configuration__image {
         order: 2;
-        width: auto;
-        height: 200px;
-        align-items: center; }
+        display: flex;
+        flex-direction: row; }
+        .productDetail__features-configuration__image img {
+          order: 1;
+          width: 50%;
+          padding: 20px 0px;
+          height: auto;
+          align-items: center; }
     .productDetail__features-tech .table {
       width: 50%; }
   .productDetail__support {
@@ -52,7 +57,7 @@
     width: 100%; }
     .productDetail__support-content {
       display: table-cell;
-      padding: 30px 100px;
+      padding: 30px 60px;
       min-height: 240px;
       color: #FFFFFF; }
     .productDetail__support-contactbox {

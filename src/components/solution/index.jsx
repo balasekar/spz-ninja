@@ -17,7 +17,7 @@ export default class SolutionPanel extends React.PureComponent {
     }
 
     askForQuote() {
-            this.props.askForQuote(this.props.title);
+        this.props.askForQuote(this.props.title);
     }
 
 
@@ -27,7 +27,7 @@ export default class SolutionPanel extends React.PureComponent {
             <Panel className="solution_panel" header={<h2>{title}</h2>} bsStyle="info">
                 <Row>
                     <Col xs={12} md={6}>
-                        <img className="solution_image" src={require('../../images/solutions/' + image.toString() )}
+                        <img className="solution_image" src={require('../../images/solutions/' + image.toString())}
                              alt={title}/>
                     </Col>
                     <Col xs={12} md={6}>
@@ -39,7 +39,8 @@ export default class SolutionPanel extends React.PureComponent {
                                 <li key={implementation.value}>{implementation.value}</li>
                             ))}
                         </ul>
-                        <Button className="solution_button" bsSize="small" bsStyle="info" onClick={this.askForQuote}>Ask for quote >></Button>
+                        <Button className="solution_button" bsSize="small" bsStyle="info" onClick={this.askForQuote}>Ask
+                            for quote >></Button>
                     </Col>
                 </Row>
             </Panel>
