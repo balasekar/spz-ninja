@@ -5,8 +5,26 @@
 
 .homeText {
   position: absolute;
-  top: 50%;
-  left: 5%; }
+  top: 70%;
+  left: 5%;
+  color: #eee; }
 
 .homeContent {
-  font-size: 3vh; }
+  font-size: 3vh;
+  color: #eee; }
+
+.SPZ__Row {
+  display: flex;
+  flex-direction: row; }
+
+.SPZ_Page {
+  order: 1;
+  width: 100%;
+  background: #F3F3F3;
+  text-align: center;
+  border-left: 1px solid #E2E2E2;
+  border-bottom: 1px solid #E2E2E2; }
+  .SPZ_Page-element {
+    height: 110px;
+    width: auto;
+    padding: 15px; }
