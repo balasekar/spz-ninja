@@ -1,9 +1,15 @@
 .imgBG {
-    background-size: cover;
-    width: 100%;
-    height: 93vh;
+  background-size: cover;
+  width: 100%;
+  height: 93vh;
+}
+
+.homeText {
+  position: absolute;
+  top: 50%;
+  left: 5%;
 }
 
 .homeContent {
-    font-size: 3vh;
+  font-size: 3vh;
 }

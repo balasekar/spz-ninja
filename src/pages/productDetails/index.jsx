@@ -34,7 +34,8 @@ class ProductDetail extends Component {
         this.setState({
             productId: nextProps.match.params.productId,
             products: nextProps.products,
-            productDetails: _.filter(nextProps.products, product => product.id == nextProps.match.params.productId)[0],
+            productDetails: _.filter(nextProps.products,
+                    product => product.id.toString() === nextProps.match.params.productId.trim().toString())[0],
             show_overlay: nextProps.show_overlay
         });
     }
