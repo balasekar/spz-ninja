@@ -1,16 +1,14 @@
 .client_panel {
   margin: 1% 1.5%;
   background-color: white;
-  border: 0;
-  height: 85vh; }
+  border: 0; }
 
 .client__div {
   padding: 20px 10px;
   border: solid 2px #F5F5F5; }
 
 .client__img {
-  width: 100%;
-  height: 45%; }
+  width: 100%; }
 
 .app_container {
   padding: 65px 0; }

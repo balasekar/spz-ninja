@@ -84,18 +84,18 @@ class ProductDetail extends Component {
                         </Row>
                         <div className="productDetail__desc-item">
                             <Row>
-                                <Col xs={12} md={8}>
+                                <Col xs={8} md={8}>
                                     <p>
                                         {productDetails.desc}
                                     </p>
                                     <Button bsSize="small" bsStyle="info" onClick={this.askForQuote.bind(this, productDetails.title)}>Product
                                         Request</Button><br/>
-                                    <img src={require('@images/productDetails/industry.png')} style={{width: '100px'}}
+                                    <img src={require('@images/productDetails/industry.png')} style={{width: '6em'}}
                                          alt={'Industry'}/>
                                     <img src={require('@images/productDetails/transformer.png')}
-                                         style={{margin: '10px 20px', width: '100px'}} alt={'feeder'}/>
+                                         style={{margin: '1em 2em', width: '6em'}} alt={'feeder'}/>
                                 </Col>
-                                <Col xs={12} md={4}>
+                                <Col xs={4} md={4}>
                                     <img src={require('../../images/products/' + productDetails.image.toString())}
                                          alt={productDetails.title}/>
                                 </Col>

@@ -36,7 +36,7 @@
       }
       img {
         width: auto;
-        height: 200px;
+        height: 12em;
         align-items: center;
       }
     }
@@ -74,7 +74,7 @@
     width: 100%;
     &-content {
       display: table-cell;
-      padding: 30px 60px;
+      padding: 4em 2em;
       min-height: 240px;
       color: #FFFFFF;
     }
@@ -85,7 +85,7 @@
       display: table-cell;
       background: #3A3A3A;
       h3 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: lighter;
         padding: 0;
         line-height: normal;
@@ -113,7 +113,7 @@
       display: table-cell;
       background-image: url('../../images/bg/fire.jpg');
       h3 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: lighter;
         padding: 0;
         line-height: normal;
@@ -141,7 +141,7 @@
       min-height: 200px;
       display: table-cell;
       h3 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: lighter;
         padding: 0;
         line-height: normal;

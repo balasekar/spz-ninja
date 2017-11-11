@@ -6,6 +6,8 @@ import {PropTypes} from 'prop-types';
 import { askUserDetails, closeUserDetails, saveUserDetails} from '../../actionCreators';
 import {Grid, Row, Col, Modal, Button} from 'react-bootstrap';
 import * as FontAwesome from 'react-icons/lib/fa';
+import * as MateraialIcons from 'react-icons/lib/md';
+
 import imageSrc from '../../images/SPZ_Home.jpeg';
 import './home.css';
 
@@ -91,25 +93,25 @@ class Home extends Component {
                         <Col xs={6} md={6}>
                             <div className='SPZ__Row'>
                                 <a href='#/solutions' className='SPZ_Page'>
-                                    <FontAwesome.FaCubes className='SPZ_Page-element'/> Solutions
+                                    <FontAwesome.FaCubes className='SPZ_Page-element'/><br/> Solutions
                                 </a>
                                 <a href='#/products' className='SPZ_Page'>
-                                    <FontAwesome.FaCartArrowDown className='SPZ_Page-element'/> Products
+                                    <FontAwesome.FaCartArrowDown className='SPZ_Page-element'/><br/> Products
                                 </a>
                             </div>
                             <div className='SPZ__Row'>
                                 <a href='#/clients' className='SPZ_Page'>
-                                    <FontAwesome.FaEye className='SPZ_Page-element'/> Clients
+                                    <MateraialIcons.MdPeople className='SPZ_Page-element'/><br/> Clients
                                 </a>
                                 <a onClick={this.contactusPanel} href='#' className='SPZ_Page'>
-                                    <FontAwesome.FaEnvelopeSquare className='SPZ_Page-element'/> Contact Us
+                                    <FontAwesome.FaEnvelopeSquare className='SPZ_Page-element'/><br/> Contact Us
                                 </a>
                             </div>
                         </Col>
                     </Row>
                     <Modal show={!!this.props.show_overlay} onHide={this.close}>
                         <Modal.Header closeButton>
-                            <Modal.Title>Contact Us</Modal.Title>
+                            <Modal.Title>Contact Details</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <form>
