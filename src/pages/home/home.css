@@ -7,10 +7,11 @@
   position: absolute;
   top: 70%;
   left: 5%;
+  right: 5%;
   color: #eee; }
 
 .homeContent {
-  font-size: 1.5em;
+  font-size: 1em;
   color: #eee; }
 
 .SPZ__Row {
@@ -25,6 +26,6 @@
   border-left: 1px solid #E2E2E2;
   border-bottom: 1px solid #E2E2E2; }
   .SPZ_Page-element {
-    height: 110px;
+    height: 5.5em;
     width: auto;
-    padding: 15px; }
+    padding: .5em; }

@@ -63,7 +63,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Grid>
+                <Grid fluid>
                     <Row>
                         <Col xs={12} md={12}>
                             <img className='imgBG' alt='BG_IMG' src={imageSrc}/>

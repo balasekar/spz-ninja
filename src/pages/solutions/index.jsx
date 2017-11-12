@@ -61,7 +61,7 @@ class Solutions extends Component {
 
     render() {
         return (
-            <Grid className="app_container">
+            <Grid fluid className="app_container">
                 {this.props.solutions &&
                 this.props.solutions.map((solution) => (
                     <SolutionPanel image={solution.image} title={solution.title} desc={solution.desc}

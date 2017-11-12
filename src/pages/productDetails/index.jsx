@@ -77,7 +77,7 @@ class ProductDetail extends Component {
         return (
             <div className="productDetail">
                 {productDetails &&
-                <Grid>
+                <Grid fluid>
                     <div className="productDetail__desc">
                         <Row>
                             <h1>{productDetails.title}</h1>

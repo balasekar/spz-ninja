@@ -16,7 +16,7 @@ class Clients extends Component {
 
     render() {
         return (
-            <Grid className="app_container">
+            <Grid fluid={true} className="app_container">
                 {this.props.clients.length > 0 &&
                 <Panel className="client_panel" header={<h2>CLIENTS</h2>} bsStyle="info">
                     <Row>

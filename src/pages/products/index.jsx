@@ -20,7 +20,7 @@ class Products extends Component {
 
     render() {
         return (
-            <Grid className="app_container">
+            <Grid fluid className="app_container">
                 <Panel className="product_panel" header={<h2>PRODUCTS</h2>} bsStyle="info">
                     <Row>
                         {this.props.products &&
