@@ -11,7 +11,7 @@
   width: 100%; }
 
 .app_container {
-  padding: 65px 0; }
+  padding-top: 65px; }
 
 * {
   box-sizing: border-box; }
