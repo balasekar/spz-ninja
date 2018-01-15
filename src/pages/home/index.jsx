@@ -103,7 +103,7 @@ class Home extends Component {
                                 <a href='#/clients' className='SPZ_Page'>
                                     <MateraialIcons.MdPeople className='SPZ_Page-element'/><br/> Clients
                                 </a>
-                                <a onClick={this.contactusPanel} href='#' className='SPZ_Page'>
+                                <a href='#/contactUs' className='SPZ_Page'>
                                     <FontAwesome.FaEnvelopeSquare className='SPZ_Page-element'/><br/> Contact Us
                                 </a>
                             </div>

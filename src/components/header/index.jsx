@@ -31,6 +31,9 @@ const navbarInstance = (
                 <IndexLinkContainer to="/clients">
                     <NavItem eventKey={3} href="/clients">Clients</NavItem>
                 </IndexLinkContainer>
+                <IndexLinkContainer to="/contactUs">
+                    <NavItem eventKey={4} href="/contactUs">Contact Us</NavItem>
+                </IndexLinkContainer>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
