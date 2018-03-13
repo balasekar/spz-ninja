@@ -15,6 +15,13 @@
   font-size: 30px;
   margin-left: 20px; }
 
-.Nav-button {
+.App-link {
   font-size: 20px;
   margin-right: 40px; }
+  .App-link:hover {
+    text-decoration: none;
+    color: #2a2a79; }
+
+.Nav-button {
+  font-size: 20px;
+  padding-left: 10px; }

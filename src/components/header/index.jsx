@@ -18,24 +18,27 @@ const navbarInstance = (
                     </a>
                 </IndexLinkContainer>
             </Navbar.Brand>
-            <Navbar.Toggle/>
         </Navbar.Header>
-        <Navbar.Collapse>
             <Nav pullRight className="Nav-button">
                 <IndexLinkContainer to="/solutions">
-                    <NavItem eventKey={1} href="/solutions">Solutions</NavItem>
-                </IndexLinkContainer>
-                <IndexLinkContainer to="/products">
-                    <NavItem eventKey={2} href="/products">Products</NavItem>
-                </IndexLinkContainer>
-                <IndexLinkContainer to="/clients">
-                    <NavItem eventKey={3} href="/clients">Clients</NavItem>
-                </IndexLinkContainer>
-                <IndexLinkContainer to="/contactUs">
-                    <NavItem eventKey={4} href="/contactUs">Contact Us</NavItem>
+                    <NavItem eventKey={1} href="/solutions"><span className="App-link">Solutions</span></NavItem>
                 </IndexLinkContainer>
             </Nav>
-        </Navbar.Collapse>
+            <Nav pullRight className="Nav-button">
+                <IndexLinkContainer to="/products">
+                    <NavItem eventKey={2} href="/products"><span className="App-link">Products</span></NavItem>
+                </IndexLinkContainer>
+            </Nav>
+            <Nav pullRight className="Nav-button">
+                <IndexLinkContainer to="/clients">
+                    <NavItem eventKey={3} href="/clients"><span className="App-link">Clients</span></NavItem>
+                </IndexLinkContainer>
+            </Nav>
+            <Nav pullRight className="Nav-button">
+                <IndexLinkContainer to="/contactUs">
+                    <NavItem eventKey={4} href="/contactUs"  ><span className="App-link">Contact Us</span></NavItem>
+                </IndexLinkContainer>
+            </Nav>
     </Navbar>
 );
 
